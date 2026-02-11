@@ -13,8 +13,8 @@ const geistMono = Geist_Mono({
 });
 
 export const metadata: Metadata = {
-  title: "Tu Nombre | Product Engineer & Builder",
-  description: "Product Engineer & AI-Native Builder — Turning ideas into scalable SaaS",
+  title: "Hansel Altamirano | Product Engineer & AI-Native Builder",
+  description: "Building high-performance SaaS with Next.js, Supabase & AI. Founder of HookMaster.",
 };
 
 export default function RootLayout({

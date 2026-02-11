@@ -35,12 +35,13 @@ export function ProjectCard() {
                   HookMaster AI
                 </h2>
                 <p className="max-w-lg text-slate-400 leading-relaxed">
-                  Plataforma de copywriting impulsada por IA para hooks y
-                  headlines de alto impacto. Integración con Stripe, onboarding
-                  guiado y métricas en tiempo real.
+                  Ingeniería de Retención para creadores. Plataforma SaaS con IA
+                  que optimiza guiones de Short-form content. En Producción.
                 </p>
                 <a
-                  href="#"
+                  href="https://github.com/Thechimichurri21/hookmaster-ai"
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="mt-8 inline-flex items-center gap-2 text-sm font-medium text-slate-300 transition group-hover:text-white"
                 >
                   Ver proyecto

@@ -1,7 +1,7 @@
 import {
   Github,
   Mail,
-  Twitter,
+  Linkedin,
   Zap,
   Bot,
   MessageCircle,
@@ -90,11 +90,11 @@ function Footer() {
     <footer id="contact" className="border-t border-slate-800/80 py-12">
       <div className="mx-auto flex max-w-5xl flex-col items-center justify-between gap-6 px-6 sm:flex-row">
         <p className="text-sm text-slate-500">
-          © {new Date().getFullYear()} Tu Nombre
+          © {new Date().getFullYear()} Hansel Altamirano
         </p>
         <div className="flex items-center gap-6">
           <a
-            href="https://github.com"
+            href="https://github.com/Thechimichurri21"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 transition hover:text-white"
@@ -103,16 +103,16 @@ function Footer() {
             <Github className="h-5 w-5" />
           </a>
           <a
-            href="https://twitter.com"
+            href="https://www.linkedin.com/in/hansel-jam"
             target="_blank"
             rel="noopener noreferrer"
             className="text-slate-400 transition hover:text-white"
-            aria-label="Twitter"
+            aria-label="LinkedIn"
           >
-            <Twitter className="h-5 w-5" />
+            <Linkedin className="h-5 w-5" />
           </a>
           <a
-            href="mailto:tu@email.com"
+            href="mailto:hanseljoan2@gmail.com"
             className="text-slate-400 transition hover:text-white"
             aria-label="Email"
           >
