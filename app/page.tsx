@@ -5,31 +5,35 @@ import {
   Zap,
   Bot,
   MessageCircle,
+  Code2,
+  Database,
+  CreditCard,
+  Sparkles,
 } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { ProjectCard } from "@/components/project-card";
 
 function TechStack() {
   const techs = [
-    { name: "Next.js", icon: "▲" },
-    { name: "Supabase", icon: "⚡" },
-    { name: "Stripe", icon: "💳" },
-    { name: "OpenAI", icon: "🤖" },
+    { name: "Next.js", icon: Code2 },
+    { name: "Supabase", icon: Database },
+    { name: "Stripe", icon: CreditCard },
+    { name: "OpenAI", icon: Sparkles },
   ];
   return (
-    <section className="border-y border-slate-800/80 py-12">
+    <section className="border-y border-slate-800/80 py-16">
       <div className="mx-auto max-w-5xl px-6">
-        <p className="mb-8 text-center text-sm font-medium uppercase tracking-wider text-slate-500">
+        <p className="mb-10 text-center font-mono text-xs uppercase tracking-widest text-slate-500">
           Stack habitual
         </p>
-        <div className="flex flex-wrap items-center justify-center gap-10">
+        <div className="flex flex-wrap items-center justify-center gap-6">
           {techs.map((t) => (
             <div
               key={t.name}
-              className="flex items-center gap-3 rounded-xl border border-slate-800 bg-slate-900/50 px-6 py-4 text-slate-300"
+              className="flex items-center gap-3 rounded-lg border border-slate-800 bg-slate-900/40 px-5 py-3"
             >
-              <span className="text-2xl">{t.icon}</span>
-              <span className="font-medium">{t.name}</span>
+              <t.icon className="h-4 w-4 shrink-0 text-slate-400" />
+              <span className="font-mono text-sm text-slate-400">{t.name}</span>
             </div>
           ))}
         </div>
