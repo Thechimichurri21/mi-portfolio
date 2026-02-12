@@ -35,11 +35,11 @@ export function HookMasterDemo() {
       {/* Browser chrome — glassmorphism */}
       <div className="flex items-center gap-2 border-b border-white/10 bg-white/5 px-4 py-3 backdrop-blur-sm">
         <div className="flex gap-1.5">
-          <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
-          <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
-          <span className="h-2.5 w-2.5 rounded-full bg-slate-600" />
+          <span className="h-2.5 w-2.5 rounded-full bg-zinc-600" />
+          <span className="h-2.5 w-2.5 rounded-full bg-zinc-600" />
+          <span className="h-2.5 w-2.5 rounded-full bg-zinc-600" />
         </div>
-        <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1.5 font-mono text-[10px] text-slate-500">
+          <div className="ml-4 flex-1 rounded-md bg-white/5 px-3 py-1.5 font-mono text-[10px] text-zinc-500">
           app.hookmaster.ai
         </div>
       </div>
@@ -50,17 +50,17 @@ export function HookMasterDemo() {
           variants={item}
           className="flex w-12 shrink-0 flex-col items-center gap-4 border-r border-white/10 bg-black/30 py-4"
         >
-          <LayoutGrid className="h-4 w-4 text-slate-500" />
-          <FileText className="h-4 w-4 text-slate-500" />
-          <BarChart3 className="h-4 w-4 text-slate-500" />
-          <Settings className="h-4 w-4 text-slate-500" />
+          <LayoutGrid className="h-4 w-4 text-zinc-500" />
+          <FileText className="h-4 w-4 text-zinc-500" />
+          <BarChart3 className="h-4 w-4 text-zinc-500" />
+          <Settings className="h-4 w-4 text-zinc-500" />
         </motion.aside>
 
         {/* Área principal */}
         <div className="flex flex-1 flex-col justify-center p-6">
           <motion.div variants={item} className="space-y-4">
             <div className="rounded-lg border border-white/10 bg-white/5 px-4 py-3">
-              <span className="font-mono text-sm text-slate-500">
+              <span className="font-mono text-sm text-zinc-500">
                 Enter your video topic...
               </span>
             </div>
@@ -70,7 +70,7 @@ export function HookMasterDemo() {
                 className={`rounded-lg px-4 py-2 font-mono text-sm font-medium transition-colors ${
                   isHovered
                     ? "bg-blue-500 text-white"
-                    : "bg-slate-800 text-slate-400"
+                    : "bg-zinc-800 text-zinc-400"
                 }`}
               >
                 Generate Hook

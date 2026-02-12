@@ -12,6 +12,7 @@ import {
 } from "lucide-react";
 import { Hero } from "@/components/hero";
 import { ProjectCard } from "@/components/project-card";
+import { SpotlightCard } from "@/components/ui/spotlight-card";
 
 function StatusCell() {
   return (
@@ -21,11 +22,11 @@ function StatusCell() {
           <span className="absolute inline-flex h-full w-full animate-ping rounded-full bg-emerald-500/80 opacity-75" />
           <span className="relative inline-flex h-2 w-2 rounded-full bg-emerald-500" />
         </span>
-        <span className="font-mono text-xs text-slate-400">
+        <span className="font-mono text-xs text-zinc-400">
           Available for projects
         </span>
       </div>
-      <p className="font-mono text-xs text-slate-500">Spain / Remote</p>
+      <p className="font-mono text-xs text-zinc-500">Spain / Remote</p>
     </div>
   );
 }
@@ -42,10 +43,10 @@ function TechStackCell() {
       {techs.map((t) => (
         <div
           key={t.name}
-          className="flex flex-col items-center justify-center gap-2 rounded-lg border border-white/10 bg-slate-900/30 p-4"
+          className="flex flex-col items-center justify-center gap-2 rounded-lg border border-white/[0.06] bg-zinc-900/30 p-4"
         >
-          <t.icon className="h-5 w-5 text-slate-400" />
-          <span className="font-mono text-xs text-slate-400">{t.name}</span>
+          <t.icon className="h-5 w-5 text-zinc-400" />
+          <span className="font-mono text-xs text-zinc-400">{t.name}</span>
         </div>
       ))}
     </div>
@@ -75,14 +76,14 @@ function ServicesCell() {
       {items.map((s) => (
         <div
           key={s.title}
-          className="flex items-start gap-4 rounded-lg border border-white/10 bg-slate-900/30 p-4 transition hover:border-white/20"
+          className="flex items-start gap-4 rounded-lg border border-white/[0.06] bg-zinc-900/30 p-4 transition hover:border-white/10"
         >
-          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-slate-800 text-slate-300">
+          <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-lg bg-zinc-800 text-zinc-300">
             <s.icon className="h-4 w-4" />
           </div>
           <div className="flex-1">
-            <h3 className="mb-1 font-semibold text-white text-sm">{s.title}</h3>
-            <p className="text-xs text-slate-400">{s.description}</p>
+            <h3 className="mb-1 text-sm font-semibold text-white">{s.title}</h3>
+            <p className="text-xs text-zinc-400">{s.description}</p>
           </div>
         </div>
       ))}
@@ -93,7 +94,7 @@ function ServicesCell() {
 function FooterCell() {
   return (
     <div className="flex flex-col items-center justify-between gap-6 p-6 sm:flex-row">
-      <p className="font-mono text-xs text-slate-500">
+      <p className="font-mono text-xs text-zinc-500">
         © {new Date().getFullYear()} Hansel Altamirano
       </p>
       <div className="flex items-center gap-6">
@@ -101,7 +102,7 @@ function FooterCell() {
           href="https://github.com/Thechimichurri21"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate-400 transition hover:text-white"
+          className="text-zinc-400 transition hover:text-white"
           aria-label="GitHub"
         >
           <Github className="h-5 w-5" />
@@ -110,14 +111,14 @@ function FooterCell() {
           href="https://www.linkedin.com/in/hansel-jam"
           target="_blank"
           rel="noopener noreferrer"
-          className="text-slate-400 transition hover:text-white"
+          className="text-zinc-400 transition hover:text-white"
           aria-label="LinkedIn"
         >
           <Linkedin className="h-5 w-5" />
         </a>
         <a
           href="mailto:hanseljoan2@gmail.com"
-          className="text-slate-400 transition hover:text-white"
+          className="text-zinc-400 transition hover:text-white"
           aria-label="Email"
         >
           <Mail className="h-5 w-5" />
@@ -133,34 +134,34 @@ export default function Home() {
       <div className="glow-bg" />
       <div className="grid grid-cols-1 gap-4 p-4 md:grid-cols-3 lg:grid-cols-4 lg:gap-4">
         {/* CELDA 1: Hero - Title */}
-        <div className="col-span-full rounded-3xl border border-white/10 bg-[#050505] transition-colors duration-500 hover:border-white/20 lg:col-span-3 lg:row-span-2">
+        <SpotlightCard className="col-span-full bg-zinc-900/20 backdrop-blur-md lg:col-span-3 lg:row-span-2">
           <Hero />
-        </div>
+        </SpotlightCard>
 
         {/* CELDA 2: Status/About */}
-        <div className="col-span-1 row-span-1 rounded-3xl border border-white/10 bg-emerald-950/20 transition-colors duration-500 hover:border-white/20">
+        <SpotlightCard className="col-span-1 row-span-1 bg-emerald-950/20 backdrop-blur-md">
           <StatusCell />
-        </div>
+        </SpotlightCard>
 
         {/* CELDA 3: Stack */}
-        <div className="col-span-1 row-span-1 rounded-3xl border border-white/10 bg-[#050505] transition-colors duration-500 hover:border-white/20">
+        <SpotlightCard className="col-span-1 row-span-1 bg-zinc-900/20 backdrop-blur-md">
           <TechStackCell />
-        </div>
+        </SpotlightCard>
 
         {/* CELDA 4: HookMaster - Project */}
-        <div className="col-span-full rounded-3xl border border-white/10 bg-[#050505] transition-colors duration-500 hover:border-white/20 lg:col-span-2 lg:row-span-2">
+        <SpotlightCard className="col-span-full bg-zinc-900/20 backdrop-blur-md lg:col-span-2 lg:row-span-2">
           <ProjectCard />
-        </div>
+        </SpotlightCard>
 
         {/* CELDA 5: Services */}
-        <div className="col-span-full rounded-3xl border border-white/10 bg-[#050505] transition-colors duration-500 hover:border-white/20 lg:col-span-2 lg:row-span-1">
+        <SpotlightCard className="col-span-full bg-zinc-900/20 backdrop-blur-md lg:col-span-2 lg:row-span-1">
           <ServicesCell />
-        </div>
+        </SpotlightCard>
 
         {/* CELDA 6: Links/Footer */}
-        <div className="col-span-full rounded-3xl border border-white/10 bg-[#050505] transition-colors duration-500 hover:border-white/20 lg:col-span-4">
+        <SpotlightCard className="col-span-full bg-zinc-900/20 backdrop-blur-md lg:col-span-4">
           <FooterCell />
-        </div>
+        </SpotlightCard>
       </div>
     </div>
   );
