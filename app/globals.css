@@ -5,6 +5,16 @@
   --font-mono: var(--font-geist-mono), ui-monospace, monospace;
 }
 
+/* Ocultar scrollbar nativa para scroll limpio */
+::-webkit-scrollbar {
+  display: none;
+}
+
+html {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+}
+
 /* Apple Dark Glow — fondo fijo, z-index bajo para no tapar contenido */
 .glow-bg {
   position: fixed;
